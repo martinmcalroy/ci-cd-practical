@@ -90,7 +90,7 @@ workflows:
               only: master
       - performance_tests:
           requires:
-            - deploy_to_staging
+            - ui_tests
           filters:
             branches:
               only: master
