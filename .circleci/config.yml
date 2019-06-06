@@ -70,6 +70,12 @@ jobs:
       - attach_workspace:
           at: ~/repo
       - run: yarn performance
+      - run:
+          name: Store Performance Test Results
+          command: |
+            mkdir -p /tmp/perf_results
+      - store_artifacts:
+          path: /tmp/perf_results
 
 workflows:
   version: 2
