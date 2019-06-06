@@ -59,9 +59,9 @@ workflows:
     jobs:
       - build_and_test
       - deploy_to_staging:
-        requires:
-          - build_and_test
-        filters:
-          branches:
-            only: master
+          requires:
+            - build_and_test
+          filters:
+            branches:
+              only: master
     
