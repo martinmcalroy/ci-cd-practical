@@ -64,12 +64,12 @@ jobs:
 
   performance_tests:
     docker:
-       - image: circleci/node:10.15.3
+       - image: circleci/node:10.15.3-jessie-browsers
     working_directory: ~/repo
     steps:
       - attach_workspace:
           at: ~/repo
-      - run: yarn lighthouse
+      - run: yarn performance
 
 workflows:
   version: 2
