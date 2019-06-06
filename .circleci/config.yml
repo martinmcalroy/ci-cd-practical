@@ -103,8 +103,8 @@ workflows:
       - hold_production_deploy:
           type: approval
           requires:
-            - performance_test
-            - ui_test
+            - performance_tests
+            - ui_tests
           filters:
             branches:
               only: master
