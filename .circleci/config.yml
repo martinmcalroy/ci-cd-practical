@@ -51,7 +51,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/repo
-      - run: npx surge build/ https://ci-cd-practical-development.surge.sh
+      - run: npx surge build/ https://ci-cd-practical-staging.surge.sh
 
 workflows:
   version: 2
